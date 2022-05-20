@@ -1,2 +1,10 @@
 %h1
   This is top page!
+
+- if logged_in?
+  %div
+    = current_user.name
+  = link_to "logout", logout_path, data: { "turbo-method": :delete }
+- else
+  = link_to "signup", new_user_path
+  = link_to "login", login_path
