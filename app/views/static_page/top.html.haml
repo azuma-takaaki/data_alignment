@@ -5,6 +5,13 @@
   %div
     = current_user.name
   = link_to "logout", logout_path, data: { "turbo-method": :delete }
+  = link_to "post comment", new_post_path
 - else
   = link_to "signup", new_user_path
   = link_to "login", login_path
+
+%h2 全てのコメント
+- @posts.each do |post|
+  %div
+    = post.content
+
