@@ -1,5 +1,5 @@
 class StaticPageController < ApplicationController
   def top
-    @posts = Post.all
+    @posts = Post.all.includes(:user)
   end
 end

@@ -13,5 +13,7 @@
 %h2 全てのコメント
 - @posts.each do |post|
   %div
+    = post.user.name
+  %div
     = post.content
-
+  %br
