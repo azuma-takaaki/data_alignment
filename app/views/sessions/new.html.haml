@@ -1,0 +1,10 @@
+%h1 Sessions#new
+%p Find me in app/views/sessions/new.html.haml
+
+%h1 ログイン
+= form_for(:session, url: login_path) do |f|
+  = f.label :user_ID
+  = f.email_field :user_id
+  = f.label :password
+  = f.password_field :password
+  = f.submit "Log in"

@@ -47,6 +47,7 @@ gem "bootsnap", require: false
 
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'bcrypt'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
